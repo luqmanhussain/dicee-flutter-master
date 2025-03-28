@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 
-class DiceScreen extends StatelessWidget {
+class DiceScreen extends StatefulWidget {
   const DiceScreen({super.key});
+  @override
+  State<DiceScreen> createState() => _DiceScreenState();
+}
+
+class _DiceScreenState extends State<DiceScreen> {
+  int leftDiceNumber = 2;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +22,7 @@ class DiceScreen extends StatelessWidget {
                 onPressed: () {
                   print('hii i am first');
                 },
-                child: Image.asset('images/dice1.png'),
+                child: Image.asset('images/dice$leftDiceNumber.png'),
               ),
             ),
 
